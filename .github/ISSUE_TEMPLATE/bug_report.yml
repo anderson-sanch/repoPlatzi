@@ -1,0 +1,52 @@
+name: 🐞 Bug Report
+description: Reporta un error para ayudarnos a mejorarlo
+title: "[BUG] "
+labels: ["bug"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por reportar este bug 🙌  
+        Por favor completa la siguiente información.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Descripción breve del error
+      placeholder: Ej. El botón de login no responde
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Pasos para reproducirlo
+      description: Explica paso a paso cómo ocurre el error
+      placeholder: |
+        1. Ir a...
+        2. Hacer clic en...
+        3. Ocurre el error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamiento esperado
+      placeholder: Debería redirigir al dashboard
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Capturas de pantalla (opcional)
+      description: Si aplica, adjunta imágenes
+
+  - type: input
+    id: environment
+    attributes:
+      label: Entorno
+      placeholder: Windows 11, Chrome 120, Node 20
