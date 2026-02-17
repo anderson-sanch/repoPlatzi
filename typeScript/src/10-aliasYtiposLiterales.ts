@@ -1,14 +1,11 @@
-let userId: string | number;
-userId = "1";
-userId = 1;
+type UserID = string | number;
 
-function greeting(name: string | number) {
+let userId: UserID;
+
+function greeting(name: UserID) {
     if (typeof name === "string") {
         console.log(`Hello, ${name.toLocaleUpperCase()}`);
     } else if (typeof name === "number") {
         console.log(`Hello, user #${name.toFixed(2)}`);
     }
 }
-
-greeting("Alice");
-greeting(42);
