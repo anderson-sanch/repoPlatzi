@@ -16,3 +16,5 @@ function greeting(name, size) {
 }
 greeting("Alice", 'XL');
 greeting(42, "L");
+// Esto es especialmente útil cuando se trabaja con conjuntos de valores específicos, como en el caso de los tamaños de ropa, donde se pueden definir claramente los valores permitidos y evitar errores de asignación.
+// la diferencia entre los alias types y los tipos literales es que los alias types son simplemente un nombre alternativo para un tipo existente, mientras que los tipos literales definen un conjunto específico de valores permitidos para ese tipo.
