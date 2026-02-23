@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 let userId;
 userId = "1";
 userId = 1;
@@ -13,3 +11,4 @@ function greeting(name) {
 }
 greeting("Alice");
 greeting(42);
+export {};

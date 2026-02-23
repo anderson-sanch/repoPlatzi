@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 let mynumber = undefined; // Error: Type 'undefined' is not assignable to type 'number'.
 let mystring = null; // Error: Type 'null' is not assignable to type 'string'.
 let mynull = null; // Type is inferred as 'any'
@@ -28,3 +26,4 @@ function hi2(nombre) {
 }
 hi2('juan'); // Output: hola JUAN
 hi2(null); // Output: hola nobody
+export {};

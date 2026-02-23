@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 const calcTotla = (prices) => {
     let total = 0;
     prices.forEach(price => {
@@ -16,3 +14,4 @@ const printTotal = (price) => {
 };
 const total2 = printTotal([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]); // El total es: 55
 console.log(total2); // undefined
+export {};

@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 function createProductToJson(title, createdAt, stock, size) {
     return {
         title,
@@ -26,3 +24,4 @@ const productoV2 = createProductToJsonV2('P1', new Date(), 12);
 console.log(productoV2);
 console.log(productoV2.title.toLocaleLowerCase());
 console.log(productoV2.size);
+export {};
