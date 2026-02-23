@@ -1,0 +1,1 @@
+// las tuplas nos permiten declarar un array fuertemente tipado en el cual podemos definir los tipos de datos el tamaño del mismo
