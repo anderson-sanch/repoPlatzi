@@ -4,7 +4,7 @@ addProduct({
     id: 1,
     createdAt: new Date(),
     updatedAt: new Date(),
-    name: 'Product 1',
+    title: 'Product 1',
     price: 100,
     size: 'M',
     category: {
