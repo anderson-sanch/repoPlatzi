@@ -33,3 +33,7 @@ export const createProductV2 = ({
         isNew
     }
 }
+
+const pruebaProduct2 = createProductV2({id:1})
+
+console.log(pruebaProduct2);

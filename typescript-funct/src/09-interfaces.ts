@@ -1,5 +1,7 @@
 //Las inerfaces nos permiten crear moldes de objetos, es decir, definir la estructura que deben tener los objetos que implementen esa interfaz.
 
+//ejemplo de literal types y union types para un objeto
+
 type Sizes = 'S' | 'M' | 'L' | 'XL';
 
 type Product = {
@@ -20,7 +22,7 @@ products.push({
     size: 'M'
 })
 
-//ejemplo de literal types y union types para un objeto
+//ejemplo de interfaces
 
 interface Product2 {
     id: number,
@@ -81,6 +83,19 @@ const productWithAudit2: ProductWithAudit1 = {
     price: 99.99
 }
 
-const addProduct = (product: Product) => {
+const addProduct = (product: ProductWithAudit1) => {
     products.push(product);
 }
+
+const productPrueba1 = addProduct({
+    id: 1,
+    title: 'anderson',
+    createAt: new Date(),
+    stock: 5,
+    size: 'M',
+    createdBy: 'admin',
+    updatedBy: 'admin',
+    price: 99.99
+});
+
+console.log(products);

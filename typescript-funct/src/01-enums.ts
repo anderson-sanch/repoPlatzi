@@ -1,7 +1,7 @@
 // los enum, nos permite poder crear una serie de opciones a escoger, parecido a los types literals, pero con la diferencia que este viene en formato de llave valor
 
 export enum ROLES {
-    ADMIN = 1,
+    ADMIN = '1',
     admin = 'si',
     SELLER = 'seller',
     COSTUMER = 'costumer'

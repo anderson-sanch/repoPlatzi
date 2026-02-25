@@ -12,7 +12,10 @@ export const checkRoleAdmin = () => {
     return 'no es admin';
 }
 
-checkRoleAdmin();
+const user1 = checkRoleAdmin();
+
+console.log(user1);
+
 
 export const checkRolV2 = (role1: string, role2: string) => {
     if(currentuser.rol === role1){

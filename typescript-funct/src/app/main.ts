@@ -1,6 +1,6 @@
-import { addProduct } from './Products/product.service';
+import { addProduct, products } from './Products/product.service';
 
-addProduct({
+const product1 = addProduct({
     id: 1,
     createdAt: new Date(),
     updatedAt: new Date(),
@@ -15,3 +15,10 @@ addProduct({
     }
 });
 
+console.log(products);
+
+
+
+
+//readonly 
+//
