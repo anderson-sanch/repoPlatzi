@@ -40,7 +40,7 @@ export const deleteProduct = (id: string) => {
 
 export const findProducts = (dto: FindProductDTO): Product[] => {
     
-
+    
     return products;
 }
 export const readProductsById = (id: string) => {

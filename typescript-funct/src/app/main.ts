@@ -30,7 +30,8 @@ updateProduct(firstProduct.id, {
 findProducts({
     color: 'blue',
     stock: 10,
-    createdAt: new Date('2023-01-01')
+    createdAt: new Date('2023-01-01'),
+    tags: ['electronics', 'home']
 });
 
 

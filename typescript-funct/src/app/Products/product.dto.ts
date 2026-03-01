@@ -14,6 +14,10 @@ export interface UpdateProductDTO extends Partial<CreatedProductDTO>{}
 
 type example2 = Required<Product> // con esto lo que hago es que todos los campos del producto sean obligatorios, incluso los que son opcionales en la definicion del producto, como el color o la descripcion
 
-export interface FindProductDTO extends Readonly<Partial<Product>>{} // con esto lo que hago es que todos los campos del producto sean opcionales, pero solo para la busqueda, asi puedo buscar por color, o por stock, o por cualquier campo del producto sin necesidad de llenar todos los campos del producto
+export interface FindProductDTO extends Readonly<Partial<Omit<Product, 'tags'>>>{
+    readonly tags: ReadonlyArray<string>;
+    // el primer readonlu es para evitar modificar explicitamente el array y el segundo es para poder evitar los metodos de mutacion
+    
+} // con esto lo que hago es que todos los campos del producto sean opcionales, pero solo para la busqueda, asi puedo buscar por color, o por stock, o por cualquier campo del producto sin necesidad de llenar todos los campos del producto
 
 // aca podemos ver que le agregamos el readonly a la interfaz, por medio de una unificacion, el readonly lo que nos permite es no asignar un valor por defecto al campo desde la la logica, si no la modificacion se hace desde lo deseado por el usuario
