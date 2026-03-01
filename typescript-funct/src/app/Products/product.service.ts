@@ -22,17 +22,15 @@ export const addProduct = (data: CreatedProductDTO): Product => {
     return newProduct;
 }
 
-export const updateProduct = (id: string , changes:UpdateProductDTO): Product => {
+export const updateProduct = (id: Product['id'], changes:UpdateProductDTO): Product => {
     const index = products.findIndex(item => item.id === id);
-
     const prevData = products[index];
-
     products[index] = {
         ...prevData,
         ...changes
     }
-
     return products[index];
+    // aca lo que hacemos es que especificamos que el parametros que recibimos puede variar, para contemplar eso le decimos que recibiremos al typado que tenga el id dentro del producto, asi si cambiar con el tiempo no se rompera
 }
 
 export const deleteProduct = (id: string) => {
