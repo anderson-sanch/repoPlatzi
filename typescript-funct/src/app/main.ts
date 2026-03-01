@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker'
-import { addProduct, products, updateProduct, } from './Products/product.service';
+import { addProduct, products, updateProduct, findProducts} from './Products/product.service';
 
 for (let i = 0; i < 50; i++) {
     addProduct({
@@ -27,7 +27,11 @@ updateProduct(firstProduct.id, {
     
 });
 
-
+findProducts({
+    color: 'blue',
+    stock: 10,
+    createdAt: new Date('2023-01-01')
+});
 
 
 //readonly 

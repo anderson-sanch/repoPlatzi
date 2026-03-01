@@ -1,5 +1,5 @@
 import { Product } from './product.model';
-import { CreatedProductDTO, UpdateProductDTO } from './product.dto';
+import { CreatedProductDTO, FindProductDTO, UpdateProductDTO } from './product.dto';
 import { faker } from '@faker-js/faker'
 
 export const products: Product[] = [];
@@ -40,9 +40,11 @@ export const deleteProduct = (id: string) => {
     
 }
 
-export const readProducsts = () => {
+export const findProducts = (dto: FindProductDTO): Product[] => {
+    
 
+    return products;
 }
-export const readProducstsById = (id: string) => {
+export const readProductsById = (id: string) => {
 
 }
