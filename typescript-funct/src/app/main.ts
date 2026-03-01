@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker'
-import { addProduct, products } from './Products/product.service';
+import { addProduct, products, updateProduct, } from './Products/product.service';
 
 for (let i = 0; i < 50; i++) {
     addProduct({
@@ -11,17 +11,24 @@ for (let i = 0; i < 50; i++) {
         imagen: faker.image.url(),
         tags: faker.word.words({ count: faker.number.int({ min: 2, max: 5 }) }).split(' '),
         price: parseInt(faker.commerce.price()),
-        size: faker.helpers.arrayElement(['S','M','L','XL']),
+        size: faker.helpers.arrayElement(['S', 'M', 'L', 'XL']),
         categoryId: faker.string.uuid()
     });
 }
 
 console.log(products);
 
+const firstProduct = products[0];
+
+updateProduct(firstProduct.id, {
+    title: 'nuevo titulo',
+    stock: 80,
+    price: 200,
+    
+});
+
 
 
 
 //readonly 
 //los readonly son una flag que permite no modificar o otorga dato por defecto esos datos cuando son extendidos
-
-// Utility types
