@@ -9,7 +9,7 @@ console.log(date, date2);
 
 // clase
 
-class MyDate{
+export class MyDate{
     year: number;
     month:number;
     day: number;
