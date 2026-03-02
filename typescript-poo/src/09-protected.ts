@@ -1,4 +1,4 @@
-export class Animal {
+export abstract class Animal {
     constructor(
     protected _name:string,
 
@@ -18,7 +18,7 @@ export class Animal {
      
 }
 
-class Dog extends Animal {
+export class Dog extends Animal {
 
     
     constructor(
