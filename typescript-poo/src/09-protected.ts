@@ -1,6 +1,6 @@
 export abstract class Animal {
     constructor(
-    protected _name:string,
+    protected name:string,
 
 ){}
     move(){
@@ -8,12 +8,16 @@ export abstract class Animal {
     }
 
     gretting(){
-        console.log(`Hi, i'm ${this._name}`);
+        console.log(`Hi, i'm ${this.name}`);
         
     }
 
     protected doSomething(){
         console.log('Doing something');
+    }
+
+    public changeName(newName : string){
+        this.name = newName;
     }
      
 }
@@ -30,7 +34,7 @@ export class Dog extends Animal {
 
     bark(times: number) : void {
         for(let i = 0; i < times; i++){
-            console.log('Woof!' + this._name);
+            console.log('Woof!' + this.name);
         }
         this.doSomething();
     }
@@ -42,7 +46,9 @@ export class Dog extends Animal {
 }
 
 const thor = new Dog('Thor','Anderson');
-// thor._name = 'Thor II';
+thor.changeName('Thor II');
 
 thor.bark(2);
 thor.move();
+
+// protected: Solo se puede acceder desde la clase y sus subclases, no desde instancias de la clase.

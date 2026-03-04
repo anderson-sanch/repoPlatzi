@@ -6,7 +6,7 @@ let customerAge: number = 28;
 customerAge += 1;
 console.log(customerAge);
 
-let productInStock: number; //mostrar de manera explícita que es un número si no le damos un valor inicial
+let productInStock: number = 0; // inicializamos para evitar usarlo antes de asignar
 console.log('productoInStock', productInStock);
 
 if(productInStock > 10){

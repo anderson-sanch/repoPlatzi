@@ -1,5 +1,5 @@
-let mynumber : number = undefined; // Error: Type 'undefined' is not assignable to type 'number'.
-let mystring : string = null; // Error: Type 'null' is not assignable to type 'string'.
+let mynumber : number | undefined = undefined;
+let mystring : string | null = null;
 
 let mynull: null = null; // Type is inferred as 'any'
 let myundefined: undefined = undefined; // Type is inferred as 'any'
@@ -36,4 +36,3 @@ function hi2(nombre: string | null) {
 
 hi2('juan'); // Output: hola JUAN
 hi2(null); // Output: hola nobody
-

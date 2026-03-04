@@ -21,7 +21,7 @@ export class MyService {
 }
 
 const miService1 = MyService.created('Service 1');
-console.log(MyService.created,miService1.getName());
+console.log(MyService.instance,miService1.getName());
 
 const miservice2 = MyService.created('Service 2');
 console.log(miservice2.getName());
