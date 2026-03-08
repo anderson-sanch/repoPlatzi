@@ -19,3 +19,30 @@
 // console.log(i);
 // }
 // console.timeEnd('operacion')
+
+
+// count
+console.count('contador')
+console.count('contador')
+console.count('contador')
+console.count('contador')
+console.count('contador')
+console.countReset('contador')
+
+// agrupacion
+console.group('grupo Principal')
+console.log('hola mami');
+console.group("grupo subgrupo1");
+console.log("hola mami en el subgrupo1");
+console.groupEnd();
+console.group("grupo subgrupo2");
+console.log("hola mami en el subgrupo2");
+console.groupEnd();
+
+// afirmaciones
+console.assert(1===1, 'no se muestra');
+
+// clear
+console.clear()
+
+console.trace('Mostrar la pila de llamadas actual')

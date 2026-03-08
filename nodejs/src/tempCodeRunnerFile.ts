@@ -1,0 +1,1 @@
+console.trace('Mostrar la pila de llamadas actual')
