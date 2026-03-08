@@ -1,1 +1,3 @@
-console.trace('Mostrar la pila de llamadas actual')
+process.on('exit', () =>{
+  console.log('el proceso esta terminado');
+})
