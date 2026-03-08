@@ -1,12 +1,8 @@
 export class MyDate{
-    private year: number;
-    private month:number;
-    private day: number;
+    
 
-    constructor(year: number, month: number, day: number){
-        this.year = year;
-        this.month = month;
-        this.day = day;
+    constructor(  public year: number, public month: number, public day: number){
+        
     }
 
     // metodos son funciones que se declaran dentro de una clase, y pueden ser utilizadas por los objetos de esa clase

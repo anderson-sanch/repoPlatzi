@@ -8,7 +8,7 @@ export function parseString(input: number): boolean;
 
 
 
-// Sobrecarga de funciones: Permite definir múltiples firmas para una función, lo que permite que la función se comporte de manera diferente según los tipos de argumentos que reciba, con la sintaxis de arriba no es necesario validar el dato para acceder a sus metodos.
+// Sobrecarga de funciones: Permite definir múltiples firmas para una función, lo que permite que la función se comporte de manera diferente según los tipos de argumentos que reciba, con la sintaxis de arriba no es necesario validar el dato para acceder a sus metodos y modificar el resultado.
 
 // Sobrecarga de funciones en TypeScript
 export function parseString(input: unknown): unknown {
@@ -20,11 +20,11 @@ export function parseString(input: unknown): unknown {
         return true; // Convierte el booleano en una cadena y luego en un array de caracteres
     }
 
-    // if(Array.isArray(input)){
-    //     return input.join(''); // Convierte el array de caracteres en una cadena
-    // } else {
-    //     return input.split(''); // Convierte la cadena en un array de caracteres
-    // }
+    if(Array.isArray(input)){
+        return input.join(''); // Convierte el array de caracteres en una cadena
+    } else {
+        return input.split(''); // Convierte la cadena en un array de caracteres
+    }
 }
 
 

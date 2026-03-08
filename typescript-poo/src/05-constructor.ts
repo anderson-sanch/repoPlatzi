@@ -8,6 +8,7 @@ export class MyDate{
     ){}
 
     // esta es una manera de como abreviar el codigo del constructor
+    // se debe colocar el modificador de acceso y el tipo de dato para poder abreviar el codigo del constructor, de esta manera no es necesario declarar las propiedades de la clase y asignarlas en el constructor, ya que esto se hace automaticamente al colocar el modificador de acceso y el tipo de dato en los parametros del constructor. 
 
     // metodos son funciones que se declaran dentro de una clase, y pueden ser utilizadas por los objetos de esa clase
     public printFormat(): string{

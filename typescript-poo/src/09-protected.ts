@@ -1,52 +1,54 @@
 export abstract class Animal {
     constructor(
-    protected name:string,
+        protected name: string,
 
-){}
-    move(){
+    ) { }
+
+    move() {
         console.log('I am moving');
     }
 
-    gretting(){
+    gretting() {
         console.log(`Hi, i'm ${this.name}`);
-        
+
     }
 
-    protected doSomething(){
+    protected doSomething() {
         console.log('Doing something');
     }
 
-    public changeName(newName : string){
+    public changeName(newName: string) {
         this.name = newName;
     }
-     
+
 }
 
 export class Dog extends Animal {
 
-    
+
     constructor(
-        name:string,
-        public owner:string
-    ){
+        name: string,
+        public owner: string
+    ) {
         super(name);
     }
 
-    bark(times: number) : void {
-        for(let i = 0; i < times; i++){
+    bark(times: number): void {
+        for (let i = 0; i < times; i++) {
             console.log('Woof!' + this.name);
         }
         this.doSomething();
     }
 
-    move(){
+    move() {
         console.log('I am running as a dog');
         super.move();
     }
 }
 
-const thor = new Dog('Thor','Anderson');
+const thor = new Dog('Thor', 'Anderson');
 thor.changeName('Thor II');
+// thor.name = 'Thor III'; --- IGNORE --- porque es protected
 
 thor.bark(2);
 thor.move();
