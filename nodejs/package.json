@@ -1,13 +1,17 @@
 {
   "name": "nodejs",
   "version": "1.0.0",
-  "description": "node js examples",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsx watch src/index.ts",
+    "fs": "tsx src/fs.ts",
+    "transcribe": "tsx src/fs-openia.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
   },
-  "keywords": [],
-  "author": "Anderson sanchez <anderson.asm201@gmail.com>",
-  "license": "MIT",
-  "type": "commonjs"
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
 }
