@@ -1,0 +1,8 @@
+clase 1
+patrones de diseño: es una manera de crear codigo con ciertas estructuras ya definidas, esto nos ayuda a darle orden y poder leer nuestro propio codigo y codigo de terceros
+
+Patrones mas comunes 
+SINGLETON
+OBSERVER
+PROTOTYPE 
+MIDDELWARE
