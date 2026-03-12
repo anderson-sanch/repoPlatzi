@@ -1,8 +1,8 @@
 class Singleton {
     static #instance: Singleton
-    private name?:string;
 
-    private constructor(){}
+
+    private constructor(private name?:string){}
 
     public static get instance(): Singleton{
         if(!Singleton.#instance){
