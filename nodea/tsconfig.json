@@ -9,9 +9,10 @@
     // See also https://aka.ms/tsconfig/module
     "module": "esnext",
     "target": "esnext",
-    // For nodejs:
-    "lib": ["esnext"],
     "types": ["node"],
+    // For nodejs:
+    // "lib": ["esnext"],
+    // "types": ["node"],
 
 
     // Stricter Typechecking Options
