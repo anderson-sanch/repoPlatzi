@@ -1,36 +1,38 @@
 import {Logger} from './01-logger'
+import * as path from 'path';
+import * as fs from 'fs';
 
 const loggerInstace = Logger.instance;
 
-class ConsoleLogger {
-  constructor(public logger: Logger) {
-    this.logger = loggerInstace
-  }
-
-  log(message:string){
-    console.log(`Usando consolelogger`);
-    this.logger.log(message)
-    console.log(`Usando consolelogger : ${message}`);
-  }
-}
 
 class FileLogger {
+
+  private filePath: string;
+
   constructor(public logger: Logger) {
-    this.logger = loggerInstace;
+    this.filePath = path.join(__dirname, "log/logs.txt");
+
+    const logDir = path.dirname(this.filePath);
+    if(!fs.existsSync(logDir)){
+      fs.mkdirSync(logDir);
+    }
   }
 
   log(message: string) {
-    console.log(`Usando FileLogger`);
+    const timestamp = new Date().toISOString();
+    const logMessage = `${timestamp}: ${message}`;
     this.logger.log(message);
-    console.log(`Usando FileLogger : ${message}`);
+
+    fs.appendFileSync(this.filePath, logMessage + "\n")
+
+    console.log("Guardado en archivo");
+    
   }
 }
 
 export class FactoryLogger {
   static createLogger(type:string){
-    if(type === 'console'){
-      return new ConsoleLogger(loggerInstace);
-    }else if(type === 'file'){
+    if(type === 'file'){
       return new FileLogger(loggerInstace);
     }else{
       throw new Error('Tipo de logger no valido')
