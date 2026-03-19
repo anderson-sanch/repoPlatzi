@@ -52,3 +52,5 @@ let messi : jugador = {
     correr: 'si puede',
     saltar: true
 }
+
+

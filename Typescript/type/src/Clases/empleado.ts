@@ -1,4 +1,4 @@
-import { Persona } from "./main";
+// import { Persona } from "./main";
 
 class Empleado extends Persona {
 
